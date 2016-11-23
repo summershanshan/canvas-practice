@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800"></canvas>
+	<script>
+		var canvas=document.getElementById("canvas"),
+			ctx=canvas.getContext("2d");
+	//绘制七色板
+		// var params=[
+		// 		{p:[{x:0,y:0},{x:800,y:0},{x:400,y:400}],color:"#caff67"},
+		// 		{p:[{x:0,y:0},{x:400,y:400},{x:0,y:800}],color:"#67bccf"},
+		// 		{p:[{x:800,y:0},{x:800,y:400},{x:600,y:600},{x:600,y:200}],color:"#ef3d61"},
+		// 		{p:[{x:600,y:200},{x:600,y:600},{x:400,y:400}],color:"#f9f5la"},
+		// 		{p:[{x:400,y:400},{x:400,y:400},{x:400,y:800},{x:200,y:600}],color:"#a594c0"},
+		// 		{p:[{x:200,y:600},{x:400,y:800},{x:0,y:800}],color:"#fa8ecc"},
+		// 		{p:[{x:800,y:400},{x:800,y:800},{x:400,y:800}],color:"#f6ca29"}
+		// 	]
+		// for(var i=0,len=params.length;i<len;i++){
+		// 	draw(params[i],ctx);
+		// }
+		// function draw(param,context){
+		// 	context.beginPath();
+		// 	context.moveTo(param.p[0].x,param.p[0].y);
+		// 	for(var i=1,len=param.p.length;i<len;i++){
+		// 		context.lineTo(param.p[i].x,param.p[i].y);
+		// 		context.strokeStyle="black";
+		// 		context.stroke();
+		// 	}
+		// 	context.closePath();
+		// 	context.fillStyle=param.color;
+		// 	context.fill();
+
+		// }
+
+
+ //练习弧度API
+      for(var i=0; i<10;i++){
+      	ctx.beginPath();
+      	ctx.arc(50+i*100,60,40,0,2*Math.PI*(i+1)/10,true);
+      	ctx.closePath();
+      	ctx.fill();
+      }
+	</script>
+</body>
+</html>
